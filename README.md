@@ -5,3 +5,7 @@ The overall design of react app is simple and elegant, including:
 Bootstrap CSS framework 
 
 Responsive web design
+
+SCSS syntax
+
+Google Fonts
