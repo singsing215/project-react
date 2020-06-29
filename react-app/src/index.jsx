@@ -1,10 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import logo from './logo.png';
 
 
 const navbar = (
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <header>
+  <div class="container">
+  <nav class="navbar navbar-expand-lg navbar-light">
     <a class="navbar-brand" href="http://localhost:3000/">Home</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" 
       aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -19,25 +22,34 @@ const navbar = (
       </div>
     </div>
   </nav>
+  </div>
+  </header>
 );
 
 const highlight = (
-  <div class="container">
-    <h1 class="display-4">Real Estate Rental System</h1>
-    <p class="lead">Real Estate Rental Management System is a web-based system to facilitate flatshare and
-    finding roommates.
-    </p>
+  <section id="hightlight">
+  <div class="jumbotron">
+    <div class="container">
+      <div class="col-md-12">
+        <h1 class="display-4">Real Estate Rental System</h1>
+        <p class="lead">Real Estate Rental Management System is a web-based system to facilitate flatshare and
+        finding roommates.
+        </p>
+      </div>
+    </div>
   </div>
+  </section>
 );
 
 const content = (
   <section id="content">
+  <div class="container">
   <div class="row">
     <div id="div01" class="card col-12 col-sm-12 col-lg-6 col-xl-6">
-      <h5><a href="http://localhost:1337/rent/details/1">半山自住品味靚裝-三房兩廁-中高層開揚景觀</a></h5>
+      <h5 id="title"><a href="http://localhost:1337/rent/details/1">半山自住品味靚裝-三房兩廁-中高層開揚景觀</a></h5>
       <div class=" row">
-        <div class="col-12 col-sm-6 col-lg-6 col-xl-6"> <img class="img-fluid img-thumbnail" alt="Connection timed out"
-          src="https://i1.28hse.com/2019/09/938689_2019094721.jpg" value="cover" width="350" height="350" /></div>
+        <div class="col-12 col-sm-6 col-lg-6 col-xl-6" id="img"> <img class="img-fluid img-thumbnail" alt="Connection timed out"
+          src="https://i1.28hse.com/2019/09/938689_2019094721.jpg" value="cover" /></div>
         <div class="col-12 col-sm-6 col-lg-6 col-xl-6" id="div1">
           <ul class="list-group">
             <li class="list-group-item"><label>
@@ -55,10 +67,10 @@ const content = (
     </div>
 
     <div id="div02" class="card col-12 col-sm-12 col-lg-6 col-xl-6">
-      <h5><a href="http://localhost:1337/rent/details/2">銅鑼灣2房2廳。即租即住。優質罕盤。</a></h5>
+      <h5 id="title"><a href="http://localhost:1337/rent/details/2">銅鑼灣2房2廳。即租即住。優質罕盤。</a></h5>
       <div class=" row">
-        <div class=" col-12 col-sm-6 col-lg-6 col-xl-6"> <img class="img-fluid img-thumbnail" alt="Connection timed out"
-          src="https://i1.28hse.com/2019/10/951089_2019104698.jpg" value="cover" width="350" height="350" /></div>
+        <div class=" col-12 col-sm-6 col-lg-6 col-xl-6"  id="img"> <img class="img-fluid img-thumbnail" alt="Connection timed out"
+          src="https://i1.28hse.com/2019/10/951089_2019104698.jpg" value="cover"/></div>
         <div class="col-12 col-sm-6 col-lg-6 col-xl-6" id="div1">
           <ul class="list-group">
             <li class="list-group-item"><label>
@@ -76,10 +88,10 @@ const content = (
     </div>
 
     <div id="div03" class="card col-12 col-sm-12 col-lg-6 col-xl-6">
-      <h5><a href="http://localhost:1337/rent/details/3">形品星寓。3分鐘到地鐵站</a></h5>
+      <h5 id="title"><a href="http://localhost:1337/rent/details/3">形品星寓。3分鐘到地鐵站</a></h5>
       <div class=" row">
-        <div class=" col-12 col-sm-6 col-lg-6 col-xl-6"> <img class="img-fluid img-thumbnail" alt="Connection timed out"
-          src="https://i1.28hse.com/2019/09/930790_2019095031.jpg" value="cover" width="350" height="350" /></div>
+        <div class=" col-12 col-sm-6 col-lg-6 col-xl-6"  id="img"> <img class="img-fluid img-thumbnail" alt="Connection timed out"
+          src="https://i1.28hse.com/2019/09/930790_2019095031.jpg" value="cover" /></div>
         <div class="col-12 col-sm-6 col-lg-6 col-xl-6" id="div1">
           <ul class="list-group">
             <li class="list-group-item"><label>
@@ -97,10 +109,10 @@ const content = (
     </div>
 
     <div id="div04" class="card col-12 col-sm-12 col-lg-6 col-xl-6">
-      <h5><a href="http://localhost:1337/rent/details/1">中上環服務式住宅 2分鐘到地鐵</a></h5>
+      <h5 id="title"><a href="http://localhost:1337/rent/details/1">中上環服務式住宅 2分鐘到地鐵</a></h5>
       <div class=" row">
-        <div class=" col-12 col-sm-6 col-lg-6 col-xl-6"> <img class="img-fluid img-thumbnail" alt="Connection timed out"
-          src="https://i1.28hse.com/2019/10/955789_2019101877.jpg" value="cover" width="350" height="350" /></div>
+        <div class=" col-12 col-sm-6 col-lg-6 col-xl-6"  id="img"> <img class="img-fluid img-thumbnail" alt="Connection timed out"
+          src="https://i1.28hse.com/2019/10/955789_2019101877.jpg" value="cover"/></div>
         <div class="col-12 col-sm-6 col-lg-6 col-xl-6" id="div1">
           <ul class="list-group">
             <li class="list-group-item"><label>
@@ -117,14 +129,46 @@ const content = (
       </div>
     </div>
   </div>
+  </div>
   </section>
 );
 
-
+const footer = (
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 text-left" style={{padding: 0}}>
+        <img src={logo}></img>
+        <p class="lead">Simple and easy-to-use system can find roommates for you.
+        </p>
+        </div>
+        <div class="col-md-4 text-left">
+          <h5 id="links">Links</h5>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Search</a></li>
+          </ul>
+          <ul>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Contact</a></li>
+          </ul>
+          </div>
+        <div class="col-md-4 text-left">
+          <h5>Contact Me</h5>
+          <p>香港九龍塘窩打老道224號<br></br>
+            Phone: (852) 9047-3975<br></br>
+            E-Mail: <a href="mailto:19413238@life.hkbu.edu.hk">19413238@life.hkbu.edu.hk</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+);
 
 ReactDOM.render(navbar, document.getElementById('navbar'));
 ReactDOM.render(highlight, document.getElementById('highlight'));
 ReactDOM.render(content, document.getElementById('content'));
+ReactDOM.render(footer, document.getElementById('footer'));
 
 
 
