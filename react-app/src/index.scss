@@ -5,65 +5,46 @@ $botton-line-color: #c9c9c9;
 $footer-p-color: rgb(92, 92, 92);
 $icon-color: dimgrey;
 
-body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
-        "Droid Sans", "Helvetica Neue", sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
+// body {
+//     margin: 0;
+//     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+//         "Droid Sans", "Helvetica Neue", sans-serif;
+//     -webkit-font-smoothing: antialiased;
+//     -moz-osx-font-smoothing: grayscale;
+// }
 
-code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
-}
-
-#div01 {
-    padding: 20px 20px 20px;
-}
-#div02 {
-    padding: 20px 20px 20px;
-}
-#div03 {
-    padding: 20px 20px 20px;
-}
-#div04 {
-    padding: 20px 20px 20px;
-}
-#Login {
-    float: right;
-}
-
-h5 {
-    font-family: $Noto-Sans-TC;
-    font-size: 18px;
-}
-
-#title {
-    font-family: $Noto-Sans-TC;
-    font-size: 20px;
-    margin-bottom: 20px;
-}
-
-li {
-    font-family: $open-Sans;
-    font-size: 14px;
-}
-
-i {
-    font-size: smaller;
-    color: $icon-color;
-}
-
-img {
-    width: 100%;
-}
-
+// code {
+//     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+// }
 .jumbotron {
     padding: 2rem 0rem;
     margin-bottom: 1rem;
 }
 
-#content {
+section {
+    #div01 {
+        padding: 20px 20px 20px;
+    }
+    h5 {
+        font-family: $Noto-Sans-TC;
+        font-size: 18px;
+    }
+    #title {
+        font-family: $Noto-Sans-TC;
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+    li {
+        font-family: $open-Sans;
+        font-size: 14px;
+    }
+    i {
+        font-size: smaller;
+        color: $icon-color;
+    }
+    img {
+        width: 100%;
+    }
     .container {
         margin-bottom: 19px;
     }
@@ -72,56 +53,33 @@ img {
 footer {
     border-top: solid 1px $botton-line-color;
     margin-top: 43px;
-}
-
-footer {
     img {
         width: 72px;
         float: left;
     }
-}
-
-footer {
     .lead {
         font-size: 15px;
     }
-}
-
-footer {
     .container {
         margin-top: 10px;
     }
-}
-
-footer {
     p {
         font-family: $open-Sans;
         font-size: 14px;
         color: $footer-p-color;
         margin-bottom: 0.5rem;
     }
-}
-
-footer {
+    h5 {
+        font-family: $Noto-Sans-TC;
+        font-size: 18px;
+    }
     ul {
         list-style: none;
         padding: 0;
         float: left;
         margin-right: 70px;
-    }
-}
-
-footer {
-    ul {
         li {
             margin-bottom: 7px;
-        }
-    }
-}
-
-footer {
-    ul {
-        li {
             a {
                 color: $footer-p-color;
             }
@@ -132,5 +90,30 @@ footer {
 @media only screen and (max-width: 767px) {
     #links {
         margin-top: 20px;
+    }
+}
+
+@media only screen and (max-width: 574px) {
+    #links {
+        margin-top: 1px;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    footer {
+        .lead {
+            margin-top: 20px;
+            margin-top: 8px;
+        }
+    }
+    footer {
+        ul {
+            margin-bottom: 0;
+        }
+    }
+    section{
+        #div01{
+            margin-bottom: 17px;
+        }
     }
 }

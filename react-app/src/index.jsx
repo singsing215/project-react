@@ -1,9 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-// import './index.css';
 import './index.scss';
 import logo from './logo.png';
-
 
 const navbar = (
   <header>
@@ -28,7 +26,7 @@ const navbar = (
 );
 
 const highlight = (
-  <section id="hightlight">
+  <upper>
   <div class="jumbotron">
     <div class="container">
       <div class="col-md-12">
@@ -39,11 +37,11 @@ const highlight = (
       </div>
     </div>
   </div>
-  </section>
+  </upper>
 );
 
 const content = (
-  <section id="content">
+  <section>
   <div class="container">
   <div class="row">
     <div id="div01" class="card col-12 col-sm-12 col-lg-6 col-xl-6">
@@ -67,7 +65,7 @@ const content = (
       </div>
     </div>
 
-    <div id="div02" class="card col-12 col-sm-12 col-lg-6 col-xl-6">
+    <div id="div01" class="card col-12 col-sm-12 col-lg-6 col-xl-6">
       <h5 id="title"><a href="http://localhost:1337/rent/details/2">銅鑼灣2房2廳。即租即住。優質罕盤。</a></h5>
       <div class=" row">
         <div class=" col-12 col-sm-6 col-lg-6 col-xl-6"  id="img"> <img class="img-fluid img-thumbnail" alt="Connection timed out"
@@ -88,7 +86,7 @@ const content = (
       </div>
     </div>
 
-    <div id="div03" class="card col-12 col-sm-12 col-lg-6 col-xl-6">
+    <div id="div01" class="card col-12 col-sm-12 col-lg-6 col-xl-6">
       <h5 id="title"><a href="http://localhost:1337/rent/details/3">形品星寓。3分鐘到地鐵站</a></h5>
       <div class=" row">
         <div class=" col-12 col-sm-6 col-lg-6 col-xl-6"  id="img"> <img class="img-fluid img-thumbnail" alt="Connection timed out"
@@ -109,7 +107,7 @@ const content = (
       </div>
     </div>
 
-    <div id="div04" class="card col-12 col-sm-12 col-lg-6 col-xl-6">
+    <div id="div01" class="card col-12 col-sm-12 col-lg-6 col-xl-6">
       <h5 id="title"><a href="http://localhost:1337/rent/details/1">中上環服務式住宅 2分鐘到地鐵</a></h5>
       <div class=" row">
         <div class=" col-12 col-sm-6 col-lg-6 col-xl-6"  id="img"> <img class="img-fluid img-thumbnail" alt="Connection timed out"
@@ -140,6 +138,7 @@ const footer = (
       <div class="row">
         <div class="col-md-4 text-left" style={{padding: 0}}>
         <img src={logo}></img>
+        <h5 id="links">Real Estate Rental System</h5>
         <p class="lead">Simple and easy-to-use system can find roommates for you.
         </p>
         </div>
