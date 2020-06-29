@@ -145,8 +145,8 @@ const footer = (
         <div class="col-md-4 text-left">
           <h5 id="links">Links</h5>
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Search</a></li>
+            <li><a href="http://localhost:3000/">Home</a></li>
+            <li><a href="http://localhost:1337/rent/paginate">Search</a></li>
           </ul>
           <ul>
           <li><a href="#">FAQ</a></li>

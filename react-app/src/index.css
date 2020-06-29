@@ -62,6 +62,7 @@ img{
 
 footer{
   border-top: solid 1px #c9c9c9;
+  margin-top: 43px;
 }
 
 footer img{
@@ -81,6 +82,7 @@ footer p{
   font-family: 'open Sans', sans-serif;
   font-size: 14px;
   color:rgb(92, 92, 92);
+  margin-bottom: 0.5rem;
 }
 
 footer ul{
