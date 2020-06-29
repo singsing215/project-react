@@ -41,7 +41,7 @@ section {
 
 footer {
     border-top: solid 1px $botton-line-color;
-    margin-top: 36px;
+    margin-top: 25px;
     img {
         width: 72px;
         float: left;
@@ -56,7 +56,7 @@ footer {
         font-family: $open-Sans;
         font-size: 14px;
         color: $footer-p-color;
-        margin-bottom: 0.5rem;
+        margin-bottom: 1px;
     }
     h5 {
         font-family: $Noto-Sans-TC;
@@ -76,6 +76,14 @@ footer {
     }
 }
 
+@media only screen and (max-width: 1200px) {
+    footer {
+    .lead {
+        margin-left: 72px;
+    }
+}
+}
+
 @media only screen and (max-width: 767px) {
     #links {
         margin-top: 20px;
@@ -91,7 +99,7 @@ footer {
 @media only screen and (max-width: 991px) {
     footer {
         .lead {
-            margin-top: 20px;
+            margin-left: 72px;
             margin-top: 8px;
         }
     }

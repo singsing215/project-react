@@ -139,7 +139,7 @@ const footer = (
         <div class="col-md-4 text-left" style={{padding: 0}}>
         <img src={logo}></img>
         <h5 id="links">Real Estate Rental System</h5>
-        <p class="lead">Simple and easy-to-use system can find roommates for you.
+        <p class="lead">Simple and easy-to-use rental system can find roommates for you.
         </p>
         </div>
         <div class="col-md-4 text-left">
@@ -155,7 +155,7 @@ const footer = (
           </div>
         <div class="col-md-4 text-left">
           <h5>Contact Me</h5>
-          <p>香港九龍塘窩打老道224號<br></br>
+          <p>香港浸會大學吳多泰博士國際中心809房<br></br>
             Phone: (852) 9047-3975<br></br>
             E-Mail: <a href="mailto:19413238@life.hkbu.edu.hk">19413238@life.hkbu.edu.hk</a>
           </p>
