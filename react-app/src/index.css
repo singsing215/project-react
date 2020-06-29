@@ -25,3 +25,20 @@ code {
 #Login {
   float: right;
 }
+
+h5{
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 18px;
+}
+
+li{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+}
+
+i{
+  font-size: smaller;
+  color: dimgrey;
+}
+
+

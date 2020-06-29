@@ -31,6 +31,7 @@ const highlight = (
 );
 
 const content = (
+  <section id="content">
   <div class="row">
     <div id="div01" class="card col-12 col-sm-12 col-lg-6 col-xl-6">
       <h5><a href="http://localhost:1337/rent/details/1">半山自住品味靚裝-三房兩廁-中高層開揚景觀</a></h5>
@@ -40,13 +41,13 @@ const content = (
         <div class="col-12 col-sm-6 col-lg-6 col-xl-6" id="div1">
           <ul class="list-group">
             <li class="list-group-item"><label>
-              <h5>Estate: </h5>
+              <h5><i class="fas fa-home" ></i> Estate: </h5>
             </label> Robinson Heights</li>
             <li class="list-group-item"><label>
-              <h5>Gross Area: </h5>
+              <h5><i class="fas fa-th"></i> Gross Area: </h5>
             </label> 899 sq feet</li>
             <li class="list-group-item"><label>
-              <h5>Rent: </h5>
+              <h5><i class="fas fa-hand-holding-usd"></i> Rent: </h5>
             </label> $43000</li>
           </ul>
         </div>
@@ -61,13 +62,13 @@ const content = (
         <div class="col-12 col-sm-6 col-lg-6 col-xl-6" id="div1">
           <ul class="list-group">
             <li class="list-group-item"><label>
-              <h5>Estate: </h5>
+              <h5><i class="fas fa-home" ></i> Estate: </h5>
             </label> Robinson Heights</li>
             <li class="list-group-item"><label>
-              <h5>Gross Area: </h5>
+              <h5><i class="fas fa-th"></i> Gross Area: </h5>
             </label> 899 sq feet</li>
             <li class="list-group-item"><label>
-              <h5>Rent: </h5>
+              <h5><i class="fas fa-hand-holding-usd"></i> Rent: </h5>
             </label> $43000</li>
           </ul>
         </div>
@@ -82,13 +83,13 @@ const content = (
         <div class="col-12 col-sm-6 col-lg-6 col-xl-6" id="div1">
           <ul class="list-group">
             <li class="list-group-item"><label>
-              <h5>Estate: </h5>
+              <h5><i class="fas fa-home" ></i> Estate: </h5>
             </label> Lime Stardom</li>
             <li class="list-group-item"><label>
-              <h5>Gross Area: </h5>
+              <h5><i class="fas fa-th"></i> Gross Area: </h5>
             </label> 390 sq feet</li>
             <li class="list-group-item"><label>
-              <h5>Rent: </h5>
+              <h5><i class="fas fa-hand-holding-usd"></i> Rent: </h5>
             </label> $19000</li>
           </ul>
         </div>
@@ -103,19 +104,20 @@ const content = (
         <div class="col-12 col-sm-6 col-lg-6 col-xl-6" id="div1">
           <ul class="list-group">
             <li class="list-group-item"><label>
-              <h5>Estate: </h5>
+              <h5><i class="fas fa-home" ></i> Estate: </h5>
             </label> AKVO Hotel</li>
             <li class="list-group-item"><label>
-              <h5>Gross Area: </h5>
+              <h5><i class="fas fa-th"></i> Gross Area: </h5>
             </label> 605 sq feet</li>
             <li class="list-group-item"><label>
-              <h5>Rent: </h5>
+              <h5><i class="fas fa-hand-holding-usd"></i> Rent: </h5>
             </label> $35000</li>
           </ul>
         </div>
       </div>
     </div>
   </div>
+  </section>
 );
 
 
