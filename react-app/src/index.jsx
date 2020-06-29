@@ -59,7 +59,7 @@ const content = (
             </label> 899 sq feet</li>
             <li class="list-group-item"><label>
               <h5><i class="fas fa-hand-holding-usd"></i> Rent: </h5>
-            </label> $43000</li>
+            </label> $4,3000</li>
           </ul>
         </div>
       </div>
@@ -80,7 +80,7 @@ const content = (
             </label> 899 sq feet</li>
             <li class="list-group-item"><label>
               <h5><i class="fas fa-hand-holding-usd"></i> Rent: </h5>
-            </label> $43000</li>
+            </label> $4,3000</li>
           </ul>
         </div>
       </div>
@@ -101,7 +101,7 @@ const content = (
             </label> 390 sq feet</li>
             <li class="list-group-item"><label>
               <h5><i class="fas fa-hand-holding-usd"></i> Rent: </h5>
-            </label> $19000</li>
+            </label> $1,9000</li>
           </ul>
         </div>
       </div>
@@ -122,7 +122,7 @@ const content = (
             </label> 605 sq feet</li>
             <li class="list-group-item"><label>
               <h5><i class="fas fa-hand-holding-usd"></i> Rent: </h5>
-            </label> $35000</li>
+            </label> $3,5000</li>
           </ul>
         </div>
       </div>
