@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.scss';
 import logo from './logo.png';
 
+
 const navbar = (
   <header>
   <div class="container">
