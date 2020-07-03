@@ -1,62 +1,12 @@
 $Noto-Sans-TC: "Noto Sans TC", sans-serif;
-$Noto-Sans-HK: 'Noto Sans HK', sans-serif;
+$Noto-Sans-HK: "Noto Sans HK", sans-serif;
 $open-Sans: "open Sans", sans-serif;
-$MuseoModerno: 'MuseoModerno', cursive;
-$Sofia: 'Sofia', cursive;
+$MuseoModerno: "MuseoModerno", cursive;
+$Sofia: "Sofia", cursive;
 $jumbotron-color: #333;
 $botton-line-color: #c9c9c9;
 $footer-p-color: rgb(92, 92, 92);
 $icon-color: dimgrey;
-
-
-header {
-    a{
-        font-family: $MuseoModerno;
-        font-size: 16px;
-        font-weight: 400;
-    }
-}
-
-.jumbotron {
-    padding: 2rem 0rem;
-    margin-bottom: 1rem;
-    h1{
-        font-family: $Sofia;
-    }
-    .lead{
-        font-family: $Noto-Sans-HK;
-        font-size: 1.25rem;
-    }
-}
-
-section {
-    #div01 {
-        padding: 20px 20px 20px;
-    }
-    h5 {
-        font-family: $Noto-Sans-TC;
-        font-size: 18px;
-    }
-    #title {
-        font-family: $Noto-Sans-TC;
-        font-size: 20px;
-        margin-bottom: 20px;
-    }
-    li {
-        font-family: $open-Sans;
-        font-size: 14px;
-    }
-    i {
-        font-size: smaller;
-        color: $icon-color;
-    }
-    img {
-        width: 100%;
-    }
-    .container {
-        margin-bottom: 19px;
-    }
-}
 
 footer {
     border-top: solid 1px $botton-line-color;
@@ -97,10 +47,10 @@ footer {
 
 @media only screen and (max-width: 1200px) {
     footer {
-    .lead {
-        margin-left: 72px;
+        .lead {
+            margin-left: 72px;
+        }
     }
-}
 }
 
 @media only screen and (max-width: 767px) {
@@ -125,11 +75,6 @@ footer {
     footer {
         ul {
             margin-bottom: 0;
-        }
-    }
-    section{
-        #div01{
-            margin-bottom: 17px;
         }
     }
 }
