@@ -5,7 +5,6 @@ import logo from './logo.png';
 export default class Header extends React.Component {
     render() {
         return (
-            <html lang="en">
                 <div id="footer" >
                     <footer>
                         <div class="container">
@@ -38,7 +37,6 @@ export default class Header extends React.Component {
                         </div>
                     </footer>
                 </div>
-            </html>
         )
     }
 }

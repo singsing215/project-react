@@ -36,7 +36,7 @@ export default class Header extends React.Component {
                                         <h1 class="display-4">Real Estate Rental System</h1>
                                         <p class="lead">Real Estate Rental Management System is a web-based system to facilitate flatshare and
                                         finding roommates.
-                                </p>
+                                    </p>
                                     </div>
                                 </div>
                             </div>
