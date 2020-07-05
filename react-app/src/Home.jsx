@@ -41,7 +41,7 @@ export default class Home extends React.Component {
                     items.map((element) => {
                       return (
                         <div id="div01" class="card col-12 col-sm-12 col-lg-6 col-xl-6">
-                          <h5 id="title"><a href="http://localhost:1337/rent/details/">{element.title}</a></h5>
+                          <h5 id="title"><a href={"http://localhost:1337/rent/details/" + element.id}>{element.title}</a></h5>
                           <div class=" row">
                             <div class="col-12 col-sm-6 col-lg-6 col-xl-6" id="img"> <img class="img-fluid img-thumbnail" alt="Connection timed out"
                               src={element.url} value="cover" /></div>

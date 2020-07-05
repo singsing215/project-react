@@ -14,7 +14,7 @@ export default class Header extends React.Component {
                         Real Estate Rental Management System is a web-based system to facilitate flatshare and
                         finding roommates.
                     </p>
-                    </div>
+                </div>
                 </Container>
             </Jumbotron>
         )
