@@ -9,6 +9,7 @@ $footer-p-color: rgb(92, 92, 92);
 $icon-color: dimgrey;
 
 section {
+    margin-bottom: 110px;
     #div01 {
         padding: 20px 20px 20px;
     }
@@ -35,6 +36,9 @@ section {
     .container {
         margin-bottom: 36px;
     }
+}
+#line{
+    margin-top: 200px;
 }
 
 @media only screen and (max-width: 991px) {

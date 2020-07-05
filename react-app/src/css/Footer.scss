@@ -10,7 +10,6 @@ $icon-color: dimgrey;
 
 footer {
     border-top: solid 1px $botton-line-color;
-    margin-top: 25px;
     background-color: #f2f2f2;
     img {
         width: 72px;
@@ -20,7 +19,10 @@ footer {
         font-size: 15px;
     }
     .container {
-        margin-top: 10px;
+        margin-top: 1px;
+        .row{
+            height: 95px;
+        }
     }
     p {
         font-family: $open-Sans;
@@ -55,15 +57,20 @@ footer {
 }
 
 @media only screen and (max-width: 767px) {
-    #links {
-        margin-top: 20px;
-    }
+    footer {
+        #contact{
+            display: none;
+        }}
 }
 
 @media only screen and (max-width: 574px) {
     #links {
         margin-top: 1px;
     }
+    footer {
+        #contact{
+            display: none;
+        }}
 }
 
 @media only screen and (max-width: 991px) {
@@ -71,6 +78,9 @@ footer {
         .lead {
             margin-left: 72px;
             margin-top: 8px;
+        }
+        #link{
+            display: none;
         }
     }
     footer {
