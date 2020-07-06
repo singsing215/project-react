@@ -21,7 +21,7 @@ export default class Search extends React.Component {
     }
 
     componentDidMount() {
-        fetch('/rent/json')
+        fetch('/rent/jhome')
             .then(res => res.json())
             .then(data => {
                 console.log(data);
@@ -38,7 +38,7 @@ export default class Search extends React.Component {
                 <Header />
                 {
                     items.length > 0 ?
-                        <section style={{marginBottom: 110}}>
+                        <section style={{ marginBottom: 110 }}>
                             <div class="container">
                                 <div class="row">
                                     {
@@ -71,14 +71,8 @@ export default class Search extends React.Component {
                                                         <Typography variant="body2" color="textSecondary" component="p">
                                                             <i class="fas fa-hand-holding-usd"></i>${element.rent}
                                                         </Typography>
-                                                        {/* <Button size="small" color="primary" href={"http://localhost:1337/rent/details/" + element.id}>
-                                                            Learn More
-                                                  </Button> */}
-                                                  <Button variant="outlined" color="primary" href={"http://localhost:1337/rent/details/" + element.id}>
-                                                  Details 
-</Button>
+                                                        <Button variant="outlined" color="primary" href={"http://localhost:1337/rent/details/" + element.id}>Details </Button>
                                                     </CardContent>
-                                                    
                                                 </Card>
                                             )
                                         })

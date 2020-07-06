@@ -1,9 +1,12 @@
 import React from 'react';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 import { makeStyles } from '@material-ui/core/styles';
 import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
+
 
 
 const useStyles = makeStyles((theme) => ({
@@ -36,6 +39,8 @@ export default function ControlledOpenSelect() {
 
   return (
     <div>
+        <Header />
+        <div class="container">
       <FormControl className={classes.formControl} action="/rent/paginate" method="get">
         <InputLabel id="demo-controlled-open-select-label">Estate</InputLabel>
         <Select
@@ -56,6 +61,8 @@ export default function ControlledOpenSelect() {
           <MenuItem value="AKVO Hotel">AKVO Hotel</MenuItem>
         </Select>
       </FormControl>
+      </div>
+      <Footer />
     </div>
   );
 }
