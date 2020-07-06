@@ -23,6 +23,12 @@ export default class Nav extends React.Component {
                       <div class="navbar-nav">
                         <a class="nav-item nav-link" ><NavLink exact to='/login'>Login</NavLink></a>
                       </div>
+                      <div class="navbar-nav">
+                        <a class="nav-item nav-link" ><NavLink exact to='/test1'>test1</NavLink></a>
+                      </div>
+                      <div class="navbar-nav">
+                        <a class="nav-item nav-link" ><NavLink exact to='/test2'>test2</NavLink></a>
+                      </div>
                     </div>
                   </nav>
                 </div>

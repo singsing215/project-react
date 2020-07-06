@@ -1,91 +1,95 @@
-import React from 'react';
-import Header from './components/Header'
-import Footer from './components/Footer'
-import "./css/Home.scss";
+import React from "react";
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Card from '@material-ui/core/Card';
+import CardActionArea from '@material-ui/core/CardActionArea';
+import CardMedia from '@material-ui/core/CardMedia';
+import Button from '@material-ui/core/Button';
+import CardContent from '@material-ui/core/Button';
+import Typography from '@material-ui/core/Button';
 import { LinearProgress } from '@material-ui/core';
+import "./css/Home.scss";
 
 
+export default class Search extends React.Component {
 
-
-export default class Home extends React.Component {
-
-  constructor(props) {
-    super(props);
-    this.state = {
-      items: []
+    constructor(props) {
+        super(props);
+        this.state = {
+            items: []
+        }
     }
-  }
 
-  componentDidMount() {
-    fetch('/rent/jhome')
-      .then(res => res.json())
-      .then(data => {
-        console.log(data);
-        this.setState({
-          items: data
-        })
-      })
-  }
+    componentDidMount() {
+        fetch('/rent/json')
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                this.setState({
+                    items: data
+                })
+            })
+    }
 
-  render() {
-    const { items } = this.state
-    return (
-      <div>
-        <Header />
-          {
-            items.length > 0 ?
-            <section>
-              <div class="container">
-                <div class="row">
-                  {
-                    items.map((element) => {
-                      return (
-                        <div id="div01" class="card col-12 col-sm-12 col-lg-6 col-xl-6">
-                          <h5 id="title"><a href={"http://localhost:1337/rent/details/" + element.id}>{element.title}</a></h5>
-                          <div class=" row">
-                            <div class="col-12 col-sm-6 col-lg-6 col-xl-6" id="img"> <img class="img-fluid img-thumbnail" alt="Connection timed out"
-                              src={element.url} value="cover" /></div>
-                            <div class="col-12 col-sm-6 col-lg-6 col-xl-6" id="div1">
-                              <ul class="list-group">
-                                <li class="list-group-item"><label>
-                                  <h5><i class="fas fa-home" ></i> Estate: </h5>
-                                </label> {element.estate}</li>
-                                <li class="list-group-item"><label>
-                                  <h5><i class="fas fa-th"></i> Gross Area: </h5>
-                                </label> {element.area} sq feet</li>
-                                <li class="list-group-item"><label>
-                                  <h5><i class="fas fa-hand-holding-usd"></i> Rent: </h5>
-                                </label> ${element.rent}</li>
-                              </ul>
+    render() {
+        const { items } = this.state
+        return (
+            <div>
+                <Header />
+                {
+                    items.length > 0 ?
+                        <section style={{marginBottom: 110}}>
+                            <div class="container">
+                                <div class="row">
+                                    {
+                                        items.map((element) => {
+                                            return (
+                                                <Card >
+                                                    <CardActionArea>
+                                                        <Button href={"http://localhost:1337/rent/details/" + element.id}>
+                                                            <CardMedia
+                                                                component="img"
+                                                                alt="Contemplative Reptile"
+                                                                height="200"
+                                                                id="img"
+                                                                src={element.url}
+                                                            />
+                                                        </Button>
+                                                    </CardActionArea>
+                                                    <CardContent>
+                                                        <Typography gutterBottom variant="h5" component="h2">
+                                                            {element.estate}
+                                                        </Typography>
+                                                        <Typography variant="body2" color="textSecondary" component="p">
+                                                            {element.title}
+                                                        </Typography>
+                                                    </CardContent>
+                                                    <CardContent>
+                                                        <Typography variant="body2" color="textSecondary" component="p">
+                                                            <i class="fas fa-th"> </i>{element.area}
+                                                        </Typography>
+                                                        <Typography variant="body2" color="textSecondary" component="p">
+                                                            <i class="fas fa-hand-holding-usd"></i>${element.rent}
+                                                        </Typography>
+                                                        {/* <Button size="small" color="primary" href={"http://localhost:1337/rent/details/" + element.id}>
+                                                            Learn More
+                                                  </Button> */}
+                                                  <Button variant="outlined" color="primary" href={"http://localhost:1337/rent/details/" + element.id}>
+                                                  Details 
+</Button>
+                                                    </CardContent>
+                                                    
+                                                </Card>
+                                            )
+                                        })
+                                    }
+                                </div>
                             </div>
-                          </div>
-                        </div>
-                      )
-                    })
-                  }
-                </div>
-              </div>
-            </section>
-            : <div id="line"><LinearProgress /><LinearProgress color="secondary" /></div>
-          }
-        <Footer />
-      </div>
-
-    )
-  }
+                        </section>
+                        : <div id="line"><LinearProgress /><LinearProgress color="secondary" /></div>
+                }
+                <Footer />
+            </div>
+        )
+    }
 }
-
-
-
-
-{/* {
-  items.length > 0 ?
-  <ul>
-      {
-        items.map((element,index)=>{
-        return <li key={index}>{element.title}</li>
-        })
-      }
-  </ul>
-  :<div>wait</div>
-} */}

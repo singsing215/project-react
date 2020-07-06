@@ -1,0 +1,16 @@
+.MuiPaper-root{
+    width: 270px;
+    margin-right: 5px;
+    margin-left: 5px;
+    margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+    .MuiPaper-root{
+        width: 470px;
+
+    }
+    #img{
+        height:300px;
+    }
+}

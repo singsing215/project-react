@@ -8,43 +8,23 @@ $botton-line-color: #c9c9c9;
 $footer-p-color: rgb(92, 92, 92);
 $icon-color: dimgrey;
 
-section {
-    margin-bottom: 110px;
-    #div01 {
-        padding: 20px 20px 20px;
-    }
-    h5 {
-        font-family: $Noto-Sans-TC;
-        font-size: 18px;
-    }
-    #title {
-        font-family: $Noto-Sans-TC;
-        font-size: 20px;
-        margin-bottom: 20px;
-    }
-    li {
-        font-family: $open-Sans;
-        font-size: 14px;
-    }
-    i {
-        font-size: smaller;
-        color: $icon-color;
-    }
-    img {
-        width: 100%;
-    }
-    .container {
-        margin-bottom: 36px;
-    }
-}
 #line{
     margin-top: 200px;
 }
 
-@media only screen and (max-width: 991px) {
-    section {
-        #div01 {
-            margin-bottom: 17px;
-        }
+.MuiPaper-root{
+    width: 270px;
+    margin-right: 5px;
+    margin-left: 5px;
+    margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+    .MuiPaper-root{
+        width: 470px;
+
+    }
+    #img{
+        height:300px;
     }
 }
