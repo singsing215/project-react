@@ -5,7 +5,7 @@ import Login from "./pages/Login";
 import Test1 from "./pages/Test1";
 import Test2 from "./pages/Test2";
 import Nav from "./components/Nav";
-import {BrowserRouter as Router,Route} from "react-router-dom";
+import {BrowserRouter as Router,Route,Redirect} from "react-router-dom";
 
 
 function App() {
@@ -13,6 +13,7 @@ function App() {
     <div className="App">
       <Router>
         <Nav />
+        {/* <Redirect from='/app' to='/home' /> */}
         <Route path="/home" component={Home}></Route>
         <Route path="/search" component={Search}></Route>
         <Route path="/login" component={Login}></Route>
