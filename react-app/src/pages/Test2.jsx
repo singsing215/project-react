@@ -1,17 +1,32 @@
-import React from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import React,{ useState,useEffect } from "react"
 
-export default class Test2 extends React.Component {
-    render() {
-        return (
-            <div>
-                <Header />
-                <div class="container">
-                    test2
-                </div>
-                <Footer />
-            </div>
-        )
-    }
+const Home = () =>{
+    const [data,setData] = useState(null);
+    const [loading,setLoading] = useState(true);
+
+    useEffect(() =>{
+        (async () =>{
+            const response = await fetch("/rent/jhome");
+            const data = await response.json();
+            console.log(data)
+            setData(data)
+            setLoading(false)
+        })();
+    },[])
+
+    return(
+        <div>
+            {loading ? <h1>wait</h1> : 
+                <ul>
+                {data.map(item => (
+                  <li key={item.id}>
+                    <a href={item.url}>{item.title}</a>
+                  </li>
+                ))}
+              </ul>
+            }
+        </div>
+    )
 }
+
+export default Home
