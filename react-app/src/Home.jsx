@@ -29,8 +29,8 @@ const Home = () => {
         <div>
             <Header />
             <section style={{ marginBottom: 110 }}>
-                <div class="container">
-                    {loading ? <div id="line"><LinearProgress /><LinearProgress color="secondary" /></div> :
+                {loading ? <div id="line"><LinearProgress /><LinearProgress color="secondary" /></div> :
+                    <div class="container">
                         <div class="row">
                             {data.map(item => (
                                 <Card >
@@ -65,8 +65,8 @@ const Home = () => {
                                 </Card>
                             ))}
                         </div>
-                    }
-                </div>
+                    </div>
+                }
             </section>
             <Footer />
         </div>
