@@ -22,7 +22,7 @@ const Home = () => {
             console.log(data)
             setData(data)
             setLoading(false)
-        })();
+        })(); //useEffect(() => {f()},[])     f=(async()=>{})
     }, [])
 
     return (
