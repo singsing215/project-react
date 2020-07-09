@@ -10,7 +10,7 @@ export default class Nav extends React.Component {
             <div id="navbar">
               <header>
                 <div class="container">
-                  <nav class="navbar navbar-expand-lg navbar-light">
+                  <nav class="navbar navbar-expand-lg navbar-light" id="nav">
                     <a class="navbar-brand" ><NavLink exact to='/home'><img src={logo} style={{width:70}}></img></NavLink></a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
                       aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
