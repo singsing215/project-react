@@ -55,33 +55,41 @@ export default function InputAdornments() {
     return (
         <div>
             <Header />
-            <div class="container">
+            <div class="container" style={{marginTop:50}}>
                 <form action="http://localhost:1337/user/login" method="POST" onsubmit="submitForm(this);return false">
-                    <TextField id="outlined-basic" label="Username" variant="outlined" name="username"/>
-                    <FormControl className={clsx(classes.margin, classes.textField)} variant="outlined">
-                        <InputLabel htmlFor="outlined-adornment-password">Password</InputLabel>
-                        <OutlinedInput
-                            id="outlined-adornment-password"
-                            type={values.showPassword ? 'text' : 'password'}
-                            value={values.password}
-                            onChange={handleChange('password')}
-                            name="password"
-                            endAdornment={
-                                <InputAdornment position="end">
-                                    <IconButton
-                                        aria-label="toggle password visibility"
-                                        onClick={handleClickShowPassword}
-                                        onMouseDown={handleMouseDownPassword}
-                                        edge="end"
-                                    >
-                                        {values.showPassword ? <Visibility /> : <VisibilityOff />}
-                                    </IconButton>
-                                </InputAdornment>
-                            }
-                            labelWidth={70}
-                        />
-                    </FormControl>
-                <Button type="submit" variant="contained" color="primary" style={{ marginLeft: 9 }}>Login in</Button>
+                    <div class="row">
+                        <div class="m-auto"><TextField id="outlined-basic" label="Username" variant="outlined" name="username" /></div>
+                    </div>
+                    <div class="row">
+                        <div class="m-auto">
+                            <FormControl className={clsx(classes.margin, classes.textField)} variant="outlined">
+                                <InputLabel htmlFor="outlined-adornment-password">Password</InputLabel>
+                                <OutlinedInput
+                                    id="outlined-adornment-password"
+                                    type={values.showPassword ? 'text' : 'password'}
+                                    value={values.password}
+                                    onChange={handleChange('password')}
+                                    name="password"
+                                    endAdornment={
+                                        <InputAdornment position="end">
+                                            <IconButton
+                                                aria-label="toggle password visibility"
+                                                onClick={handleClickShowPassword}
+                                                onMouseDown={handleMouseDownPassword}
+                                                edge="end"
+                                            >
+                                                {values.showPassword ? <Visibility /> : <VisibilityOff />}
+                                            </IconButton>
+                                        </InputAdornment>
+                                    }
+                                    labelWidth={70}
+                                />
+                            </FormControl>
+                        </div>
+                    </div>
+                    <div class="row" style={{marginTop:20}}>
+                        <div class="m-auto" ><Button type="submit" variant="contained" color="primary" style={{ marginLeft: 9 }}>Login in</Button></div>
+                    </div>
                 </form>
             </div>
             <Footer />

@@ -1,54 +1,66 @@
-import React, { useState, useEffect } from "react"
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import InputLabel from '@material-ui/core/InputLabel';
+import MenuItem from '@material-ui/core/MenuItem';
+import FormControl from '@material-ui/core/FormControl';
+import Select from '@material-ui/core/Select';
+import Button from '@material-ui/core/Button';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import Card from '@material-ui/core/Card';
-import CardActionArea from '@material-ui/core/CardActionArea';
-import CardMedia from '@material-ui/core/CardMedia';
-import Button from '@material-ui/core/Button';
-import CardContent from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Button';
-import { LinearProgress } from '@material-ui/core';
-// import "../css/Search.scss";
+import '../css/Search.scss'
 
 
+const useStyles = makeStyles((theme) => ({
+  button: {
+    display: 'block',
+    marginTop: theme.spacing(2),
+  },
+  formControl: {
+    margin: theme.spacing(1),
+    minWidth: 120,
+  },
+}));
 
+export default function ControlledOpenSelect() {
+  const classes = useStyles();
+  const [open, setOpen] = React.useState(false);
 
-const Search = () => {
-  const [data, setData] = useState(null);
-  const [loading, setLoading] = useState(true);
+  const handleClose = () => {
+    setOpen(false);
+  };
 
-  useEffect(() => {
-    (async () => {
-      const response = await fetch("/rent/json");
-      const data = await response.json();
-      console.log(data)
-      setData(data)
-      setLoading(false)
-    })();
-  }, [])
+  const handleOpen = () => {
+    setOpen(true);
+  };
 
   return (
-    <div id="div01" class="card col-12 col-sm-4 col-lg-4 col-xl-4">
-      <form action="http://localhost:1337/rent/jpaginate" method="get">
-          <h1>Property Search</h1>
-          <div class="row">
-            <div class="col-12 col-sm-4 col-lg-4 col-xl-3">
-              <label>Estate:</label></div>
-            <div class="col-12 col-sm-8 col-lg-8 col-xl-9">
-              <select type="string" class="form-control" name="estate" id="estate">
-                <option value="">--please select a estate--</option>
-                <option value="Robinson Heights">Robinson Heights</option>
-                <option value="Hoi deen Court">Hoi deen Court</option>
-                <option value="Lime Stardom">Lime Stardom</option>
-                <option value="AKVO Hotel">AKVO Hotel</option>
-              </select></div>
+    <div>
+      <Header />
+      <div class="container">
+        <form action="http://localhost:1337/rent/jpaginate" method="get">
+          <FormControl className={classes.formControl} id="selector">
+            <InputLabel id="demo-controlled-open-select-label">select a estate</InputLabel>
+            <Select
+              labelId="demo-controlled-open-select-label"
+              id="demo-controlled-open-select"
+              open={open}
+              onClose={handleClose}
+              onOpen={handleOpen}
+              name="estate"
+            >
+              <MenuItem value=""><em>None</em></MenuItem>
+              <MenuItem value={"Robinson Heights"}>Robinson Heights</MenuItem>
+              <MenuItem value={"Hoi deen Court"}>Hoi deen Court</MenuItem>
+              <MenuItem value={"Lime Stardom"}>Lime Stardom</MenuItem>
+              <MenuItem value={"AKVO Hotel"}>AKVO Hotel</MenuItem>
+            </Select>
+          </FormControl>
+          <div class="row" id="btn">
+            <Button type="submit"  variant="contained" color="primary" style={{ marginLeft: 9 }}>Search</Button>
           </div>
-          <div class="row">
-            <button type="submit" class="btn btn-primary">Search</button>
-          </div>
-      </form>
+        </form>
+      </div>
+      <Footer />
     </div>
-  )
+  );
 }
-
-export default Search
