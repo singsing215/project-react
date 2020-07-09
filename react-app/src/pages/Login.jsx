@@ -56,36 +56,33 @@ export default function InputAdornments() {
         <div>
             <Header />
             <div class="container">
-                <div className={classes.root}>
-                    <div>
-                        <form className={classes.root} noValidate autoComplete="off" style={{marginLeft: 9}}>
-                            <TextField id="outlined-basic" label="Username" variant="outlined" />
-                        </form>
-                        <FormControl className={clsx(classes.margin, classes.textField)} variant="outlined">
-                            <InputLabel htmlFor="outlined-adornment-password">Password</InputLabel>
-                            <OutlinedInput
-                                id="outlined-adornment-password"
-                                type={values.showPassword ? 'text' : 'password'}
-                                value={values.password}
-                                onChange={handleChange('password')}
-                                endAdornment={
-                                    <InputAdornment position="end">
-                                        <IconButton
-                                            aria-label="toggle password visibility"
-                                            onClick={handleClickShowPassword}
-                                            onMouseDown={handleMouseDownPassword}
-                                            edge="end"
-                                        >
-                                            {values.showPassword ? <Visibility /> : <VisibilityOff />}
-                                        </IconButton>
-                                    </InputAdornment>
-                                }
-                                labelWidth={70}
-                            />
-                        </FormControl>
-                    </div>
-                </div>
-                <Button variant="contained" color="primary" style={{marginLeft: 9}}>Login in</Button>
+                <form action="http://localhost:1337/user/login" method="POST" onsubmit="submitForm(this);return false">
+                    <TextField id="outlined-basic" label="Username" variant="outlined" name="username"/>
+                    <FormControl className={clsx(classes.margin, classes.textField)} variant="outlined">
+                        <InputLabel htmlFor="outlined-adornment-password">Password</InputLabel>
+                        <OutlinedInput
+                            id="outlined-adornment-password"
+                            type={values.showPassword ? 'text' : 'password'}
+                            value={values.password}
+                            onChange={handleChange('password')}
+                            name="password"
+                            endAdornment={
+                                <InputAdornment position="end">
+                                    <IconButton
+                                        aria-label="toggle password visibility"
+                                        onClick={handleClickShowPassword}
+                                        onMouseDown={handleMouseDownPassword}
+                                        edge="end"
+                                    >
+                                        {values.showPassword ? <Visibility /> : <VisibilityOff />}
+                                    </IconButton>
+                                </InputAdornment>
+                            }
+                            labelWidth={70}
+                        />
+                    </FormControl>
+                <Button type="submit" variant="contained" color="primary" style={{ marginLeft: 9 }}>Login in</Button>
+                </form>
             </div>
             <Footer />
         </div>

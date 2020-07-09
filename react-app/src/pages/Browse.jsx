@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
-import Header from './components/Header';
-import Footer from './components/Footer';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardMedia from '@material-ui/core/CardMedia';
@@ -8,21 +8,23 @@ import Button from '@material-ui/core/Button';
 import CardContent from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Button';
 import { LinearProgress } from '@material-ui/core';
-import "./css/Home.scss";
+import "../css/Browse.scss";
 
 
-const Home = () => {
+
+
+const Browse = () => {
     const [data, setData] = useState(null);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         (async () => {
-            const response = await fetch("/rent/jhome");
+            const response = await fetch("/rent/json");
             const data = await response.json();
             console.log(data)
             setData(data)
             setLoading(false)
-        })(); //useEffect(() => {f()},[])     f=(async()=>{})
+        })();
     }, [])
 
     return (
@@ -73,11 +75,22 @@ const Home = () => {
     )
 }
 
-export default Home
+export default Browse
 
-/////////////////////////// Without Hook //////////////////////////////////
 
-// export default class Home extends React.Component {
+
+
+
+
+//////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+// export default class Search extends React.Component {
 
 //     constructor(props) {
 //         super(props);
@@ -87,7 +100,7 @@ export default Home
 //     }
 
 //     componentDidMount() {
-//         fetch('/rent/jhome')
+//         fetch('/rent/json')
 //             .then(res => res.json())
 //             .then(data => {
 //                 console.log(data);
@@ -98,13 +111,13 @@ export default Home
 //     }
 
 //     render() {
-//            const { items } = this.state
+//         const { items } = this.state
 //         return (
 //             <div>
 //                 <Header />
 //                 {
 //                     items.length > 0 ?
-//                         <section style={{ marginBottom: 110 }}>
+//                         <section style={{marginBottom: 110}}>
 //                             <div class="container">
 //                                 <div class="row">
 //                                     {

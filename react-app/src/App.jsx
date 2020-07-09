@@ -1,8 +1,8 @@
 import React from 'react';
 import Home from "./Home";
-import Search from "./pages/Search";
+import Browse from "./pages/Browse";
 import Login from "./pages/Login";
-import Test1 from "./pages/Test1";
+import Search from "./pages/Search";
 import Test2 from "./pages/Test2";
 import Nav from "./components/Nav";
 import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
@@ -15,9 +15,9 @@ function App() {
         <Nav />
         {/* <Redirect from='/app' to='/home' /> */}
         <Route path="/home" component={Home}></Route>
+        <Route path="/browse" component={Browse}></Route>
         <Route path="/search" component={Search}></Route>
         <Route path="/login" component={Login}></Route>
-        <Route path="/test1" component={Test1}></Route>
         <Route path="/test2" component={Test2}></Route>
       </Router>
     </div>

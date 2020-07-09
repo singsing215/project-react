@@ -18,13 +18,13 @@ export default class Nav extends React.Component {
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                       <div class="navbar-nav">
-                        <a class="nav-item nav-link"><NavLink exact to='/search'>Search </NavLink></a>
+                        <a class="nav-item nav-link"><NavLink exact to='/browse'>Browse</NavLink></a>
+                      </div>
+                      <div class="navbar-nav">
+                        <a class="nav-item nav-link" ><NavLink exact to='/search'>Search</NavLink></a>
                       </div>
                       <div class="navbar-nav">
                         <a class="nav-item nav-link" ><NavLink exact to='/login'>Login</NavLink></a>
-                      </div>
-                      <div class="navbar-nav">
-                        <a class="nav-item nav-link" ><NavLink exact to='/test1'>test1</NavLink></a>
                       </div>
                       <div class="navbar-nav">
                         <a class="nav-item nav-link" ><NavLink exact to='/test2'>test2</NavLink></a>
