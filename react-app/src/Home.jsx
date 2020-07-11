@@ -30,8 +30,8 @@ const Home = () => {
             <Header />
             <section style={{ marginBottom: 110 }}>
                 {loading ? <div id="line"><LinearProgress /><LinearProgress color="secondary" /></div> :
-                    <div class="container">
-                        <div class="row">
+                    <div className="container">
+                        <div className="row">
                             {data.map((item,index) => (
                                 <Card  key={index}>
                                     <CardActionArea>
@@ -55,10 +55,10 @@ const Home = () => {
                                     </CardContent>
                                     <CardContent>
                                         <Typography variant="body2" color="textSecondary" component="p">
-                                            <i class="fas fa-th"> </i>{item.area}
+                                            <i className="fas fa-th"> </i>{item.area}
                                         </Typography>
                                         <Typography variant="body2" color="textSecondary" component="p">
-                                            <i class="fas fa-hand-holding-usd"></i>${item.rent}
+                                            <i className="fas fa-hand-holding-usd"></i>${item.rent}
                                         </Typography>
                                         <Button variant="outlined" color="primary" href={"http://localhost:1337/rent/details/" + item.id}>Details </Button>
                                     </CardContent>
@@ -86,16 +86,16 @@ export default Home
 //         }
 //     }
 
-//     componentDidMount() {
-//         fetch('/rent/jhome')
-//             .then(res => res.json())
-//             .then(data => {
-//                 console.log(data);
-//                 this.setState({
-//                     items: data
-//                 })
-//             })
-//     }
+    // componentDidMount() {
+    //     fetch('/rent/jhome')
+    //         .then(res => res.json())
+    //         .then(data => {
+    //             console.log(data);
+    //             this.setState({
+    //                 items: data
+    //             })
+    //         })
+    // }
 
 //     render() {
 //            const { items } = this.state

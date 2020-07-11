@@ -5,6 +5,7 @@ import Login from "./pages/Login";
 import Search from "./pages/Search";
 import Test2 from "./pages/Test2";
 import Nav from "./components/Nav";
+import Test1 from "./pages/Text1";
 import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
 
 
@@ -18,6 +19,7 @@ function App() {
         <Route path="/browse" component={Browse}></Route>
         <Route path="/search" component={Search}></Route>
         <Route path="/login" component={Login}></Route>
+        <Route path="/test1" component={Test1}></Route>
         <Route path="/test2" component={Test2}></Route>
       </Router>
     </div>
