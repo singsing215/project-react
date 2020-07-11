@@ -25,13 +25,13 @@ export default function ControlledOpenSelect() {
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
 
-  const handleClose = () => {
-    setOpen(false);
-  };
+  const handleClose = () => {setOpen(false);};
 
-  const handleOpen = () => {
-    setOpen(true);
-  };
+  const handleOpen = () => {setOpen(true);};
+
+  const btnSubmit = (e) =>{
+    console.log(e)
+  }
 
   return (
     <div>
@@ -56,7 +56,7 @@ export default function ControlledOpenSelect() {
             </Select>
           </FormControl>
           <div className="row" id="btn">
-            <Button type="submit"  variant="contained" color="primary" style={{ marginLeft: 9 }}>Search</Button>
+            <Button type="submit" onSubmit={btnSubmit}  variant="contained" color="primary" style={{ marginLeft: 9 }}>Search</Button>
           </div>
         </form>
       </div>
