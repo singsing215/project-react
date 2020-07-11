@@ -55,13 +55,13 @@ export default function InputAdornments() {
     return (
         <div>
             <Header />
-            <div class="container" style={{marginTop:50}}>
+            <div className="container" style={{marginTop:50}}>
                 <form action="http://localhost:1337/user/login" method="POST" onSubmit="submitForm(this);return false">
-                    <div class="row">
-                        <div class="m-auto"><TextField id="outlined-basic" label="Username" variant="outlined" name="username" /></div>
+                    <div className="row">
+                        <div className="m-auto"><TextField id="outlined-basic" label="Username" variant="outlined" name="username" /></div>
                     </div>
-                    <div class="row">
-                        <div class="m-auto">
+                    <div className="row">
+                        <div className="m-auto">
                             <FormControl className={clsx(classes.margin, classes.textField)} variant="outlined">
                                 <InputLabel htmlFor="outlined-adornment-password">Password</InputLabel>
                                 <OutlinedInput
@@ -87,8 +87,8 @@ export default function InputAdornments() {
                             </FormControl>
                         </div>
                     </div>
-                    <div class="row" style={{marginTop:20}}>
-                        <div class="m-auto" ><Button type="submit" variant="contained" color="primary" style={{ marginLeft: 9 }}>Login in</Button></div>
+                    <div className="row" style={{marginTop:20}}>
+                        <div className="m-auto" ><Button type="submit" variant="contained" color="primary" style={{ marginLeft: 9 }}>Login in</Button></div>
                     </div>
                 </form>
             </div>
