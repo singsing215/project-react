@@ -32,8 +32,8 @@ const Home = () => {
                 {loading ? <div id="line"><LinearProgress /><LinearProgress color="secondary" /></div> :
                     <div class="container">
                         <div class="row">
-                            {data.map(item => (
-                                <Card >
+                            {data.map((item,index) => (
+                                <Card  key={index}>
                                     <CardActionArea>
                                         <Button href={"http://localhost:1337/rent/details/" + item.id}>
                                             <CardMedia

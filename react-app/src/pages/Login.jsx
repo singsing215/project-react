@@ -56,7 +56,7 @@ export default function InputAdornments() {
         <div>
             <Header />
             <div class="container" style={{marginTop:50}}>
-                <form action="http://localhost:1337/user/login" method="POST" onsubmit="submitForm(this);return false">
+                <form action="http://localhost:1337/user/login" method="POST" onSubmit="submitForm(this);return false">
                     <div class="row">
                         <div class="m-auto"><TextField id="outlined-basic" label="Username" variant="outlined" name="username" /></div>
                     </div>

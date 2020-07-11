@@ -8,7 +8,7 @@ export default class Header extends React.Component {
         return (
             <Jumbotron fluid>
                 <Container>
-                <div class="container">
+                <div className="container">
                     <h1>Real Estate Rental System</h1>
                     <p>
                         Real Estate Rental Management System is a web-based system to facilitate flatshare and
