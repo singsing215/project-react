@@ -11,7 +11,7 @@ export default class Nav extends React.Component {
         <header>
           <div className="container">
             <nav className="navbar navbar-expand-lg navbar-light" id="nav">
-              <NavLink className="navbar-brand" exact to='/home'><img src={logo} style={{ width: 70 }}></img></NavLink>
+              <NavLink className="navbar-brand" exact to='/home'><img src={logo} alt={"alt"} style={{ width: 70 }}></img></NavLink>
               <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>

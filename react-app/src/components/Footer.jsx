@@ -10,7 +10,7 @@ export default class Header extends React.Component {
                         <div className="container">
                             <div className="row">
                                 <div className="col-12 col-sm-8 col-lg-4 col-xl-4 text-left" style={{ padding: 0 }}>
-                                    <img src={logo}></img>
+                                    <img src={logo} alt={"alt"}></img>
                                     <h5 id="links">Real Estate Rental System</h5>
                                     <p className="lead">Simple and easy-to-use rental system can find roommates for you.
                         </p>
@@ -19,7 +19,7 @@ export default class Header extends React.Component {
                                     <h5 id="links">Links</h5>
                                     <ul>
                                         <li><a href="http://localhost:3000/">Home</a></li>
-                                        <li><a href="http://localhost:1337/rent/paginate">Search</a></li>
+                                        <li><a href="http://localhost:3000/search">Search</a></li>
                                     </ul>
                                     <ul>
                                         <li><a href="#">FAQ</a></li>

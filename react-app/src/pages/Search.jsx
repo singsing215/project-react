@@ -36,7 +36,7 @@ export default function ControlledOpenSelect() {
   return (
     <div>
       <Header />
-      <div class="container">
+      <div className="container">
         <form action="http://localhost:1337/rent/jpaginate" method="get">
           <FormControl className={classes.formControl} id="selector">
             <InputLabel id="demo-controlled-open-select-label">select a estate</InputLabel>
@@ -48,14 +48,14 @@ export default function ControlledOpenSelect() {
               onOpen={handleOpen}
               name="estate"
             >
-              <MenuItem value=""><em>None</em></MenuItem>
+              <MenuItem value={""}><em>None</em></MenuItem>
               <MenuItem value={"Robinson Heights"}>Robinson Heights</MenuItem>
               <MenuItem value={"Hoi deen Court"}>Hoi deen Court</MenuItem>
               <MenuItem value={"Lime Stardom"}>Lime Stardom</MenuItem>
               <MenuItem value={"AKVO Hotel"}>AKVO Hotel</MenuItem>
             </Select>
           </FormControl>
-          <div class="row" id="btn">
+          <div className="row" id="btn">
             <Button type="submit"  variant="contained" color="primary" style={{ marginLeft: 9 }}>Search</Button>
           </div>
         </form>
