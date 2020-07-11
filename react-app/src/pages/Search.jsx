@@ -29,10 +29,6 @@ export default function ControlledOpenSelect() {
 
   const handleOpen = () => {setOpen(true);};
 
-  const btnSubmit = (e) =>{
-    console.log(e)
-  }
-
   return (
     <div>
       <Header />
@@ -56,7 +52,7 @@ export default function ControlledOpenSelect() {
             </Select>
           </FormControl>
           <div className="row" id="btn">
-            <Button type="submit" onSubmit={btnSubmit}  variant="contained" color="primary" style={{ marginLeft: 9 }}>Search</Button>
+            <Button type="submit"  variant="contained" color="primary" style={{ marginLeft: 9 }}>Search</Button>
           </div>
         </form>
       </div>
