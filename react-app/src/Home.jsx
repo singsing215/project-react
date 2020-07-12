@@ -46,21 +46,21 @@ const Home = () => {
                                         </Button>
                                     </CardActionArea>
                                     <CardContent>
-                                        <Typography gutterBottom variant="h5" component="h2">
+                                        <Typography component="h2">
                                             {item.estate}
                                         </Typography>
-                                        <Typography variant="body2" color="textSecondary" component="p">
+                                        <Typography   component="p">
                                             {item.title}
                                         </Typography>
                                     </CardContent>
                                     <CardContent>
-                                        <Typography variant="body2" color="textSecondary" component="p">
+                                        <Typography   component="p">
                                             <i className="fas fa-th"> </i>{item.area}
                                         </Typography>
-                                        <Typography variant="body2" color="textSecondary" component="p">
+                                        <Typography   component="p">
                                             <i className="fas fa-hand-holding-usd"></i>${item.rent}
                                         </Typography>
-                                        <Button variant="outlined" color="primary" href={"http://localhost:1337/rent/details/" + item.id}>Details </Button>
+                                        <Button  color="primary" href={"http://localhost:1337/rent/details/" + item.id}>Details </Button>
                                     </CardContent>
                                 </Card>
                             ))}

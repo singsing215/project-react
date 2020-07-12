@@ -1,7 +1,25 @@
-#selector {
-    min-width: 129px;
+$Sofia: "Sofia",
+cursive;
+.css-2b097c-container {
+    margin-bottom: 39px;
 }
 
-#btn {
-    margin-left: -1px;
+.form-control {
+    margin-bottom: 39px;
+}
+
+form {
+    margin-top: 12px;
+}
+
+#nodata {
+    padding: 250px;
+}
+
+h3 {
+    font-family: $Sofia;
+}
+
+i {
+    margin-right: 5px;
 }

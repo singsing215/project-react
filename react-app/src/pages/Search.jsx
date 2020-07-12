@@ -1,62 +1,154 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import InputLabel from '@material-ui/core/InputLabel';
-import MenuItem from '@material-ui/core/MenuItem';
-import FormControl from '@material-ui/core/FormControl';
-import Select from '@material-ui/core/Select';
+import Select from 'react-select';
+import Card from '@material-ui/core/Card';
+import CardActionArea from '@material-ui/core/CardActionArea';
+import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
+import CardContent from '@material-ui/core/Button';
+import Typography from '@material-ui/core/Button';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import '../css/Search.scss'
+import "../css/Search.scss";
 
 
-const useStyles = makeStyles((theme) => ({
-  button: {
-    display: 'block',
-    marginTop: theme.spacing(2),
-  },
-  formControl: {
-    margin: theme.spacing(1),
-    minWidth: 120,
-  },
-}));
 
-export default function ControlledOpenSelect() {
-  const classes = useStyles();
-  const [open, setOpen] = React.useState(false);
 
-  const handleClose = () => {setOpen(false);};
+const options = [
+  { value: '', label: 'All' },
+  { value: 'Robinson+Heights', label: 'Robinson Heights' },
+  { value: 'Hoi+deen+Court', label: 'Hoi deen Court' },
+  { value: 'Lime+Stardom', label: 'Lime Stardom' },
+  { value: 'AKVO+Hotel', label: 'AKVO Hotel' },
+];
 
-  const handleOpen = () => {setOpen(true);};
+export default class Search extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      items: [],
+      selectedOption: "",
+      bedroom: ""
+    }
+  }
 
-  return (
-    <div>
-      <Header />
-      <div className="container">
-        <form action="http://localhost:1337/rent/jpaginate" method="get">
-          <FormControl className={classes.formControl} id="selector">
-            <InputLabel id="demo-controlled-open-select-label">select a estate</InputLabel>
-            <Select
-              labelId="demo-controlled-open-select-label"
-              id="demo-controlled-open-select"
-              open={open}
-              onClose={handleClose}
-              onOpen={handleOpen}
-              name="estate"
-            >
-              <MenuItem value={""}><em>None</em></MenuItem>
-              <MenuItem value={"Robinson Heights"}>Robinson Heights</MenuItem>
-              <MenuItem value={"Hoi deen Court"}>Hoi deen Court</MenuItem>
-              <MenuItem value={"Lime Stardom"}>Lime Stardom</MenuItem>
-              <MenuItem value={"AKVO Hotel"}>AKVO Hotel</MenuItem>
-            </Select>
-          </FormControl>
-          <div className="row" id="btn">
-            <Button type="submit"  variant="contained" color="primary" style={{ marginLeft: 9 }}>Search</Button>
+  componentDidMount() {
+    fetch('/rent/jhome')
+      .then(res => res.json())
+      .then(data => {
+        console.log(data);
+        this.setState({
+          items: data
+        })
+      })
+  }
+
+  handleChange = selectedOption => {
+    this.setState({ selectedOption });
+    console.log(`Option selected:`, selectedOption);
+  };
+
+  handleInput = e => {
+    this.setState({ bedroom: e.target.value });
+    console.log(`bedroom:`, this.state.bedroom);
+  };
+
+  handleSubmit = (selectedOption) => {
+    console.log(this.state.selectedOption.value);
+    console.log(this.state.bedroom);
+    if (!(this.state.selectedOption.value)) {
+      fetch('/rent/jpaginate?bedroom=' + this.state.bedroom)
+        .then(res => res.json())
+        .then(data => {
+          console.log(data);
+          this.setState({
+            items: data
+          })
+        });
+      console.log('/rent/jpaginate?bedroom=' + this.state.bedroom)
+    }
+    else {
+      fetch('/rent/jpaginate?estate=' + this.state.selectedOption.value + '&bedroom=' + this.state.bedroom)
+        .then(res => res.json())
+        .then(data => {
+          console.log(data);
+          this.setState({
+            items: data
+          })
+        });
+      console.log('/rent/jpaginate?estate=' + this.state.selectedOption.value + '&bedroom=' + this.state.bedroom);
+    }
+    selectedOption.preventDefault(); //阻止跳转
+  }
+
+  render() {
+    const { selectedOption } = this.state;
+    const { items } = this.state
+    return (
+      <div>
+        <Header />
+        <div className="container" style={{ marginBottom: 112 }}>
+          <div className="row">
+            <div className="card col-12 col-sm-4 col-lg-4 col-xl-3">
+              <form onSubmit={this.handleSubmit} >
+                <div ><label>Estate:</label></div>
+                <Select
+                  value={selectedOption}
+                  onChange={this.handleChange}
+                  options={options}
+                />
+                <div ><label>Bedroom:</label></div>
+                <input type="number" min={1} value={this.state.bedroom} className="form-control" name="bedroom" onChange={this.handleInput} required />
+                <div className="row" ><div className="m-auto"><Button type="submit" variant="contained" color="primary" style={{ marginLeft: 9 }}>Search</Button></div></div>
+              </form>
+            </div>
+            {
+              items.length > 0 ?
+                <div className="card col-12 col-sm-8 col-lg-8 col-xl-9">
+                  <div className="row">
+                    {
+                      items.map((element, index) => {
+                        return (
+                          <Card key={index}>
+                            <CardActionArea>
+                              <Button href={"http://localhost:1337/rent/details/" + element.id}>
+                                <CardMedia
+                                  component="img"
+                                  alt="Contemplative Reptile"
+                                  height="200"
+                                  id="img"
+                                  src={element.url}
+                                />
+                              </Button>
+                            </CardActionArea>
+                            <CardContent>
+                              <Typography component="h2">
+                                {element.estate}
+                              </Typography>
+                              <Typography component="p">
+                                {element.title}
+                              </Typography>
+                            </CardContent>
+                            <CardContent>
+                              <Typography component="p">
+                                <i className="fas fa-bed"></i>{element.bedroom}
+                              </Typography>
+                              <Typography component="p">
+                                <i className="fas fa-hand-holding-usd"></i>${element.rent}
+                              </Typography>
+                              <Button color="primary" href={"http://localhost:1337/rent/details/" + element.id}>Details </Button>
+                            </CardContent>
+                          </Card>
+                        )
+                      })
+                    }
+                  </div>
+                </div>
+                : <div id="nodata"><h3>No Matching Data</h3></div>
+            }
           </div>
-        </form>
+        </div>
+        <Footer />
       </div>
-      <Footer />
-    </div>
-  );
+    );
+  }
 }
