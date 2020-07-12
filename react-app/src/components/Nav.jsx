@@ -26,12 +26,12 @@ export default class Nav extends React.Component {
                 <div className="navbar-nav">
                   <NavLink className="nav-item nav-link" exact to='/login'>Login</NavLink>
                 </div>
-                <div className="navbar-nav">
+                {/* <div className="navbar-nav">
                   <NavLink className="nav-item nav-link" exact to='/test1'>test1</NavLink>
                 </div>
                 <div className="navbar-nav">
                   <NavLink className="nav-item nav-link" exact to='/test2'>test2</NavLink>
-                </div>
+                </div> */}
               </div>
             </nav>
           </div>

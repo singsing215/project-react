@@ -14,7 +14,7 @@ function App() {
     <div className="App">
       <Router>
         <Nav />
-        {/* <Redirect from='/app' to='/home' /> */}
+        <Redirect from='/app' to='/home' />
         <Route path="/home" component={Home}></Route>
         <Route path="/browse" component={Browse}></Route>
         <Route path="/search" component={Search}></Route>

@@ -52,6 +52,7 @@ export default function InputAdornments() {
     };
 
     const handleSubmit = (e) =>{
+        e.preventDefault();
         console.log(values);
         console.log(values.username);
         console.log(values.password);
@@ -68,9 +69,10 @@ export default function InputAdornments() {
         }).then(res => res.json())
         .then(data =>{
             console.log(data);
-            
+            alert(data.message);
+            window.location = data.url;
         })
-        e.preventDefault();
+
     }
 
     return (
