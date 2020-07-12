@@ -49,7 +49,6 @@ export default class Search extends React.Component {
 
   handleInput = e => {
     this.setState({ bedroom: e.target.value });
-    console.log(`bedroom:`, this.state.bedroom);
   };
 
   handleSubmit = (selectedOption) => {
@@ -98,7 +97,7 @@ export default class Search extends React.Component {
                 />
                 <div ><label>Bedroom:</label></div>
                 <input type="number" min={1} value={this.state.bedroom} className="form-control" name="bedroom" onChange={this.handleInput} required />
-                <div className="row" ><div className="m-auto"><Button type="submit" variant="contained" color="primary" style={{ marginLeft: 9 }}>Search</Button></div></div>
+                <div className="row" id="sbutton"><div className="m-auto"><Button type="submit" variant="contained" color="primary" style={{ marginLeft: 9 }}>Search</Button></div></div>
               </form>
             </div>
             {

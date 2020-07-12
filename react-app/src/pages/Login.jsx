@@ -12,6 +12,7 @@ import TextField from '@material-ui/core/TextField';
 import Visibility from '@material-ui/icons/Visibility';
 import VisibilityOff from '@material-ui/icons/VisibilityOff';
 import Button from '@material-ui/core/Button';
+import qs from "querystring"
 
 
 const useStyles = makeStyles((theme) => ({
@@ -33,10 +34,8 @@ const useStyles = makeStyles((theme) => ({
 export default function InputAdornments() {
     const classes = useStyles();
     const [values, setValues] = React.useState({
-        amount: '',
+        username:'',
         password: '',
-        weight: '',
-        weightRange: '',
         showPassword: false,
     });
 
@@ -52,18 +51,40 @@ export default function InputAdornments() {
         event.preventDefault();
     };
 
+    const handleSubmit = (e) =>{
+        console.log(values);
+        console.log(values.username);
+        console.log(values.password);
+        fetch("/user/login",{
+            method:"POST",
+            headers:{
+                'Content-Type': 'application/x-www-form-urlencoded',
+                "Accept":"application/json,text/plain,*/*"
+            },
+            body:qs.stringify({
+                username:values.username,
+                password:values.password
+            })
+        }).then(res => res.json())
+        .then(data =>{
+            console.log(data);
+            
+        })
+        e.preventDefault();
+    }
+
     return (
         <div>
             <Header />
             <div className="container" style={{marginTop:50}}>
-                <form action="http://localhost:1337/user/login" method="POST" onSubmit="submitForm(this);return false">
+                <form action="http://localhost:1337/user/login" method="POST" onSubmit={handleSubmit}>
                     <div className="row">
-                        <div className="m-auto"><TextField id="outlined-basic" label="Username" variant="outlined" name="username" /></div>
+                        <div className="m-auto"><TextField id="outlined-basic" label="Username" variant="outlined" name="username" value={values.username} onChange={handleChange('username')} /></div>
                     </div>
                     <div className="row">
                         <div className="m-auto">
                             <FormControl className={clsx(classes.margin, classes.textField)} variant="outlined">
-                                <InputLabel htmlFor="outlined-adornment-password">Password</InputLabel>
+                                <InputLabel  htmlFor="outlined-adornment-password">Password</InputLabel>
                                 <OutlinedInput
                                     id="outlined-adornment-password"
                                     type={values.showPassword ? 'text' : 'password'}
