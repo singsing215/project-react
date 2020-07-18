@@ -1,7 +1,13 @@
+$botton-line-color: #c9c9c9;
 .active {
     color: black;
 }
 
 #nav {
     padding: 0;
+}
+
+#navbar{
+    background-color: #f2f2f2;
+    border-bottom: solid 1px $botton-line-color;
 }
