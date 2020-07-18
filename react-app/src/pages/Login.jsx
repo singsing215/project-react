@@ -13,6 +13,7 @@ import Visibility from '@material-ui/icons/Visibility';
 import VisibilityOff from '@material-ui/icons/VisibilityOff';
 import Button from '@material-ui/core/Button';
 import qs from "querystring"
+import { Prompt } from "react-router-dom"
 
 
 const useStyles = makeStyles((theme) => ({
@@ -79,6 +80,8 @@ export default function InputAdornments() {
         <div>
             <Header />
             <div className="container" style={{marginTop:50}}>
+            <Prompt when={ !!values.username } message={ "Sure to leave?" }/>
+            <Prompt when={ !!values.password } message={ "Sure to leave?" }/>
                 <form action="http://localhost:1337/user/login" method="POST" onSubmit={handleSubmit}>
                     <div className="row">
                         <div className="m-auto"><TextField id="outlined-basic" label="Username" variant="outlined" name="username" value={values.username} onChange={handleChange('username')} /></div>
