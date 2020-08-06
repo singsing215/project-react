@@ -87,7 +87,7 @@ export default class Search extends React.Component {
         <Header />
         <div className="container" style={{ marginBottom: 112 }}>
           <div className="row">
-            <div className="card col-12 col-sm-4 col-lg-4 col-xl-3">
+            <div className="card col-12 col-sm-12 col-lg-4 col-xl-3">
               <form onSubmit={this.handleSubmit} >
                 <div ><label>Estate:</label></div>
                 <Select
@@ -102,7 +102,7 @@ export default class Search extends React.Component {
             </div>
             {
               items.length > 0 ?
-                <div className="card col-12 col-sm-8 col-lg-8 col-xl-9">
+                <div className="card col-12 col-sm-12 col-lg-8 col-xl-9">
                   <div className="row">
                     {
                       items.map((element, index) => {
@@ -142,7 +142,11 @@ export default class Search extends React.Component {
                     }
                   </div>
                 </div>
-                : <div id="nodata"><h3>No Matching Data</h3></div>
+                : <div id="nodata" className="card col-12 col-sm-12 col-lg-8 col-xl-9">
+                  <div id="text">
+                  <h3>No Matching Data</h3>
+                  </div>
+                  </div>
             }
           </div>
         </div>
