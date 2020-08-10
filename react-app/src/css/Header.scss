@@ -1,14 +1,19 @@
-$Noto-Sans-TC: "Noto Sans TC", sans-serif;
-$Noto-Sans-HK: "Noto Sans HK", sans-serif;
-$open-Sans: "open Sans", sans-serif;
-$MuseoModerno: "MuseoModerno", cursive;
-$Sofia: "Sofia", cursive;
+$Noto-Sans-TC: "Noto Sans TC",
+sans-serif;
+$Noto-Sans-HK: "Noto Sans HK",
+sans-serif;
+$open-Sans: "open Sans",
+sans-serif;
+$MuseoModerno: "MuseoModerno",
+cursive;
+$Sofia: "Sofia",
+cursive;
 $jumbotron-color: #333;
 $botton-line-color: #c9c9c9;
 $footer-p-color: rgb(92, 92, 92);
 $icon-color: dimgrey;
-
 header {
+    background-color: lightskyblue;
     a {
         font-family: $MuseoModerno;
         font-size: 16px;
