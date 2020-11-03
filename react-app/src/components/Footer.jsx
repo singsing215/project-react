@@ -22,8 +22,8 @@ export default class Header extends React.Component {
                                         <li><a href="http://localhost:3000/search">Search</a></li>
                                     </ul>
                                     <ul>
-                                        <li><a href="#">FAQ</a></li>
-                                        <li><a href="#">Contact</a></li>
+                                        <li>FAQ</li>
+                                        <li>Contact</li>
                                     </ul>
                                 </div>
                                 <div className="col-0 col-sm-4 col-lg-4 col-xl-4 text-left" id="contact">
