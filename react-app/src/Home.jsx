@@ -32,8 +32,8 @@ const Home = () => {
                 {loading ? <div id="line"><LinearProgress /><LinearProgress color="secondary" /></div> :
                     <div className="container">
                         <div className="row">
-                            {data.map((item,index) => (
-                                <Card  key={index}>
+                            {data.map((item, index) => (
+                                <Card key={index}>
                                     <CardActionArea>
                                         <Button href={"http://localhost:1337/rent/details/" + item.id}>
                                             <CardMedia
@@ -49,18 +49,18 @@ const Home = () => {
                                         <Typography component="h2">
                                             {item.estate}
                                         </Typography>
-                                        <Typography   component="p">
+                                        <Typography component="p">
                                             {item.title}
                                         </Typography>
                                     </CardContent>
                                     <CardContent>
-                                        <Typography   component="p">
+                                        <Typography component="p">
                                             <i className="fas fa-th"> </i>{item.area}
                                         </Typography>
-                                        <Typography   component="p">
+                                        <Typography component="p">
                                             <i className="fas fa-hand-holding-usd"></i>${item.rent}
                                         </Typography>
-                                        <Button  color="primary" href={"http://localhost:1337/rent/details/" + item.id}>Details </Button>
+                                        <Button color="primary" href={"http://localhost:1337/rent/details/" + item.id}>Details </Button>
                                     </CardContent>
                                 </Card>
                             ))}
