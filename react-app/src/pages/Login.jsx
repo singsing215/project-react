@@ -14,7 +14,7 @@ import VisibilityOff from '@material-ui/icons/VisibilityOff';
 import Button from '@material-ui/core/Button';
 import qs from "querystring"
 import { Prompt } from "react-router-dom"
-
+import "../css/Login.scss";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -77,7 +77,7 @@ export default function InputAdornments() {
     }
 
     return (
-        <div>
+        <div  id="container">
             <Header />
             <div className="container" style={{marginTop:50}}>
             <Prompt when={ !!values.username } message={ "Sure to leave?" }/>
@@ -113,7 +113,7 @@ export default function InputAdornments() {
                             </FormControl>
                         </div>
                     </div>
-                    <div className="row" style={{marginTop:20}}>
+                    <div className="row" style={{marginTop:20}} id="btn">
                         <div className="m-auto" ><Button type="submit" variant="contained" color="primary" style={{ marginLeft: 9 }}>Login in</Button></div>
                     </div>
                 </form>

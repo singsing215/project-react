@@ -11,6 +11,11 @@ $icon-color: dimgrey;
 footer {
     border-top: solid 1px $botton-line-color;
     background-color: #f2f2f2;
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    margin-top: 10px;
     img {
         width: 72px;
         float: left;

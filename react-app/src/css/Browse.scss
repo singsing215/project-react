@@ -1,3 +1,11 @@
+#container {
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+    padding-bottom: 100px;
+    box-sizing: border-box;
+}
+
 .MuiPaper-root{
     width: 270px;
     margin-right: 5px;

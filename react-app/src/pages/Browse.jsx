@@ -28,7 +28,7 @@ const Browse = () => {
     }, [])
 
     return (
-        <div>
+        <div  id="container">
             <Header />
             <section style={{ marginBottom: 110 }}>
                 {loading ? <div id="line"><LinearProgress /><LinearProgress color="secondary" /></div> :

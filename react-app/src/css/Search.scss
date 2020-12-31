@@ -1,5 +1,13 @@
-$Sofia: "Sofia",
-cursive;
+$Sofia: "Sofia", cursive;
+
+#container {
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+    padding-bottom: 100px;
+    box-sizing: border-box;
+}
+
 .css-2b097c-container {
     margin-bottom: 39px;
 }
@@ -28,6 +36,6 @@ i {
     margin-bottom: 39px;
 }
 
-#text{
+#text {
     text-align: center;
 }

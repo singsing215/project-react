@@ -8,6 +8,14 @@ $botton-line-color: #c9c9c9;
 $footer-p-color: rgb(92, 92, 92);
 $icon-color: dimgrey;
 
+#container {
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+    padding-bottom: 100px;
+    box-sizing: border-box;
+}
+
 #line{
     margin-top: 200px;
 }

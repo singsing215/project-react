@@ -83,7 +83,7 @@ export default class Search extends React.Component {
     const { selectedOption } = this.state;
     const { items } = this.state
     return (
-      <div>
+      <div  id="container">
         <Header />
         <div className="container" style={{ marginBottom: 112 }}>
           <div className="row">
