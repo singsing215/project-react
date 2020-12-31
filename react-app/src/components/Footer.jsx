@@ -5,7 +5,7 @@ import logo from '../logo.png';
 export default class Header extends React.Component {
     render() {
         return (
-                <div id="footer" className="fixed-bottom">
+                <div id="footer" >
                     <footer>
                         <div className="container">
                             <div className="row">
